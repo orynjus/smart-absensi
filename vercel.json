@@ -1,4 +1,19 @@
 {
+  "version": 2,
+  "name": "smart-absensi",
+  "outputDirectory": ".",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
