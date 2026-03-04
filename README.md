@@ -1,11 +1,11 @@
-# Smart Absensi v7.0 Cloud
+# Smart Absensi v7.0 Multi-Device
 
-Sistem absensi siswa berbasis web dengan integrasi Google Sheets dan sinkronisasi real-time multi-device.
+Sistem absensi siswa berbasis web dengan integrasi Google Sheets dan sinkronisasi real-time multi-device via Supabase.
 
 ## Fitur Utama
 
 - **QR Code Scanner** - Presensi siswa dengan QR code
-- **Real-time Sync** - Sinkronisasi data antar perangkat via Firebase
+- **Real-time Sync** - Sinkronisasi data antar perangkat via Supabase
 - **Google Sheets Integration** - Backup data ke Google Sheets
 - **WhatsApp Notifications** - Notifikasi otomatis ke orang tua
 - **Multi-user Authentication** - Login terpisah untuk Admin dan Scanner
@@ -16,28 +16,25 @@ Sistem absensi siswa berbasis web dengan integrasi Google Sheets dan sinkronisas
 
 - **Frontend**: HTML5, TailwindCSS, JavaScript
 - **Backend**: Google Apps Script
-- **Database**: Google Sheets + Firebase Firestore
+- **Database**: Google Sheets + Supabase PostgreSQL
 - **Deployment**: Vercel
 - **Notifications**: Fonnte API / WhatsApp Web
 
 ## Setup Instructions
 
-### 1. Firebase Configuration
+### 1. Supabase Configuration
 
-1. Buat project baru di [Firebase Console](https://console.firebase.google.com/)
-2. Enable Firestore Database
-3. Buat collection structure: `artifacts/{appId}/public/data/logs`
-4. Copy konfigurasi Firebase ke `firebase-config.js`
+1. Buat project baru di [Supabase](https://supabase.com/)
+2. Enable PostgreSQL Database
+3. Jalankan SQL schema dari `supabase-schema.sql`
+4. Copy konfigurasi Supabase ke `sync-supabase.js`
 
 ```javascript
-window.__firebase_config = `{
-  "apiKey": "your-api-key",
-  "authDomain": "your-project.firebaseapp.com",
-  "projectId": "your-project-id",
-  "storageBucket": "your-project.appspot.com",
-  "messagingSenderId": "123456789",
-  "appId": "1:123456789:web:abc123"
-}`;
+window.__supabase_config = {
+  url: "https://your-project.supabase.co",
+  anonKey: "your-anon-key"
+};
+window.__use_supabase = true;
 ```
 
 ### 2. Google Apps Script Setup
@@ -135,3 +132,6 @@ smart/
 **Developer**: Bangkit Cerdas Mandiri
 **Version**: 7.0 Cloud
 **Last Updated**: 2026
+=======
+# smart-absen
+>>>>>>> ae47d7da276ca9fdee02c92c9d782cda4afac6d4
