@@ -13,8 +13,8 @@
 ## 🔑 Langkah 2: Dapatkan Credentials
 
 1. **Go to Project** → **Settings** → **API**
-2. **Copy Project URL**: `https://your-project.supabase.co`
-3. **Copy anon public key**: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`
+2. **Copy Project URL**: `https://orazqadfjjvppiwmazdo.supabase.co`
+3. **Copy anon public key**: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9yYXpxYWRmamp2cHBpd21hemRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1OTU5OTgsImV4cCI6MjA4ODE3MTk5OH0.z-eiUYoS3sS9yjP6nYsn-uzQEs-_vOSy2fQlJvShvps`
 
 ## 🗄️ Langkah 3: Setup Database Schema
 
@@ -30,8 +30,8 @@ Edit file `sync-supabase.js`:
 
 ```javascript
 window.__supabase_config = {
-    url: "https://your-project.supabase.co", // Ganti dengan URL Anda
-    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." // Ganti dengan key Anda
+    url: "https://orazqadfjjvppiwmazdo.supabase.co", // Ganti dengan URL Anda
+    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9yYXpxYWRmamp2cHBpd21hemRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1OTU5OTgsImV4cCI6MjA4ODE3MTk5OH0.z-eiUYoS3sS9yjP6nYsn-uzQEs-_vOSy2fQlJvShvps" // Ganti dengan key Anda
 };
 
 window.__use_supabase = true; // Aktifkan Supabase
